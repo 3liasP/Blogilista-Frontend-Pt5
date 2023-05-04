@@ -26,4 +26,12 @@
 - Sijainnissa: [App-5-3.js](/App-5-3.js)
 - Nyt kirjautunut käyttäjä voi luoda uusia blogeja
 
-
+### Tehtävä 5.4: blogilistan frontend, step4
+- Toimii ongelmitta
+- Sijainnissa: [App-5-4.js](/App-5-4.js)
+- Toteutettu sovellukseen notifikaatiot, jotka kertovat sovelluksen yläosassa onnistuneista ja epäonnistuneista toimenpiteistä
+    - Onnistuneet toimenpiteet ilmoitetaan vihreällä notifikaatiolla
+        - Onnistunut uuden blogin lisäys
+        - Onnistunut uloskirjautuminen
+    - Epäonnistuneet toimenpiteet ilmoitetaan punaisella:
+        - Väärä käyttänimi tai salasana

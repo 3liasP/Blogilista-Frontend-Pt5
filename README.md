@@ -33,5 +33,5 @@
     - Onnistuneet toimenpiteet ilmoitetaan *vihreällä* notifikaatiolla:
         - Onnistunut uuden blogin lisäys
         - Onnistunut uloskirjautuminen
-    - Epäonnistuneet toimenpiteet *ilmoitetaan* punaisella:
+    - Epäonnistuneet toimenpiteet ilmoitetaan *punaisella*:
         - Väärä käyttänimi tai salasana

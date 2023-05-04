@@ -30,8 +30,8 @@
 - Toimii ongelmitta
 - Sijainnissa: [App-5-4.js](/App-5-4.js)
 - Toteutettu sovellukseen notifikaatiot, jotka kertovat sovelluksen yläosassa onnistuneista ja epäonnistuneista toimenpiteistä
-    - Onnistuneet toimenpiteet ilmoitetaan vihreällä notifikaatiolla
+    - Onnistuneet toimenpiteet ilmoitetaan *vihreällä* notifikaatiolla:
         - Onnistunut uuden blogin lisäys
         - Onnistunut uloskirjautuminen
-    - Epäonnistuneet toimenpiteet ilmoitetaan punaisella:
+    - Epäonnistuneet toimenpiteet *ilmoitetaan* punaisella:
         - Väärä käyttänimi tai salasana

@@ -20,3 +20,10 @@
 - Tehty kirjautumisesta "pysyvä" local storagen avulla
 - Tehty sovellukseen myös mahdollisuus uloskirjautumiseen
     - Uloskirjautumisen jälkeen selain ei muista kirjautunutta käyttäjää reloadauksen jälkeen.
+
+### Tehtävä 5.3: blogilistan frontend, step3
+- Toimii ongelmitta
+- Sijainnissa: [App-5-3.js](/App-5-3.js)
+- Nyt kirjautunut käyttäjä voi luoda uusia blogeja
+
+

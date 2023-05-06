@@ -57,6 +57,10 @@
     - Likejä voi antaa rajattomasti, sillä tälle ei annettu minkäänlaista rajoitusta tehtävänannossa
     - Mahdollisesti voitaisiin estää usempi like esim. `Toggleable`-komponenttia käyttämällä
 
+### Tehtävä 5.8: blogilistan frontend, step8
+- Toimii ongelmitta
+- Sijainnissa: [App-5-8.js](./src/App-5-8.js)
+- Sovellus näyttää blogit likejen mukaisessa suuruusjärjestyksessä, eniten liketty ensin
 
 ### Vapaaehtoinen TODO:
 - Lisää kommentteja

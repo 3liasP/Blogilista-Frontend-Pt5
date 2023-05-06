@@ -16,22 +16,41 @@
 
 ### Tehtävä 5.2: blogilistan frontend, step2
 - Toimii ongelmitta
-- Sijainnissa: [App-5-2.js](/App-5-2.js)
+- Sijainnissa: [App-5-2.js](./App-5-2.js)
 - Tehty kirjautumisesta "pysyvä" local storagen avulla
 - Tehty sovellukseen myös mahdollisuus uloskirjautumiseen
     - Uloskirjautumisen jälkeen selain ei muista kirjautunutta käyttäjää reloadauksen jälkeen.
 
 ### Tehtävä 5.3: blogilistan frontend, step3
 - Toimii ongelmitta
-- Sijainnissa: [App-5-3.js](/App-5-3.js)
+- Sijainnissa: [App-5-3.js](./App-5-3.js)
 - Nyt kirjautunut käyttäjä voi luoda uusia blogeja
 
 ### Tehtävä 5.4: blogilistan frontend, step4
 - Toimii ongelmitta
-- Sijainnissa: [App-5-4.js](/App-5-4.js)
+- Sijainnissa: [App-5-4.js](./App-5-4.js)
 - Toteutettu sovellukseen notifikaatiot, jotka kertovat sovelluksen yläosassa onnistuneista ja epäonnistuneista toimenpiteistä
     - Onnistuneet toimenpiteet ilmoitetaan *vihreällä* notifikaatiolla:
         - Onnistunut uuden blogin lisäys
         - Onnistunut uloskirjautuminen
     - Epäonnistuneet toimenpiteet ilmoitetaan *punaisella*:
         - Väärä käyttänimi tai salasana
+- `blogForm`:in handlerit (esim. `handleTitleChange`) ovat redundantteja, jotka on korjattu seuraavassa tehtävässä
+
+### Tehtävä 5.5: blogilistan frontend, step5
+- Toimii ongelmitta
+- Sijainnissa: [App-5-5.js](./App-5-5.js)
+- Blogin luomiseen käytettävä lomake näytetään ainostaan tarvittaessa
+    - Lomake ei ole oletusarvoisesti näkyvillä
+    - Klikkaamalla nappia create new blog lomake aukeaa
+    - Lomake sulkeutuu, kun uusi blogi luodaan
+
+### Tehtävä 5.6: blogilistan frontend, step6
+- Toimii ongelmitta
+- Myös sijainnissa: [App-5-5.js](/App-5-5.js)
+- Uuden blogin luomisesta huolehtiva lomake eriytetty omaan omaan komponenttiinsa [BlogForm.js](./components/BlogForm.js)
+
+
+### Vapaaehtoinen TODO:
+- Lisää kommentteja
+- Paranna erityyppisten notifikaatioiden yhteensopivuutta

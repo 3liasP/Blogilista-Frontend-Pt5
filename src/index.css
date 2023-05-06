@@ -1,3 +1,14 @@
+h1 {
+    color: green;
+    font-style: italic;
+}
+  
+.note {
+    color: black;
+    padding-top: 5px;
+    font-size: 15px;
+}
+
 .pos-status {
     color: green;
     background: lightgrey;

@@ -50,6 +50,13 @@
 - Myös sijainnissa: [App-5-5.js](./srcApp-5-5.js)
 - Uuden blogin luomisesta huolehtiva lomake eriytetty omaan omaan komponenttiinsa [BlogForm.js](./src/components/BlogForm.js)
 
+### Tehtävä 5.7: blogilistan frontend, step7
+- Toimii ongelmitta
+- Sijainnissa: [App-5-7.js](./srcApp-5-5.js)
+- Toteutettu like-painikkeen toiminnallisuus
+    - Likejä voi antaa rajattomasti, sillä tälle ei annettu minkäänlaista rajoitusta tehtävänannossa
+    - Mahdollisesti voitaisiin estää usempi like esim. `Toggleable`-komponenttia käyttämällä
+
 
 ### Vapaaehtoinen TODO:
 - Lisää kommentteja

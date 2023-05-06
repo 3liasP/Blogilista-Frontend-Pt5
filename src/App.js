@@ -77,6 +77,25 @@ const App = () => {
       })
   }
 
+  const addLike = id => {
+    const blog = blogs.find(b => b.id === id)
+    const newLikes = blog.likes + 1
+    const changedBlog = { ...blog, likes: newLikes }
+
+    blogService
+      .update(id, changedBlog)
+      .then(returnedBlog => {
+        setBlogs(blogs.map(blog => blog.id !== id ? blog : returnedBlog))
+      })
+      .catch(() => {
+        setStatusMessage(`Blog ${blog.title} is already removed from server!`)
+        setTimeout(() => {
+          setStatusMessage(null)
+        }, 4000)
+        setBlogs(blogs.filter(b => b.id !== id))
+      })
+  }
+
   if (user === null) {
     return (
       <div>
@@ -109,14 +128,19 @@ const App = () => {
 
   return (
     <div>
-      <h2>blogs</h2>
+      <h1>BlogApp</h1>
       <Notification message={statusMessage} />
       <p>{user.name} logged in <button onClickCapture={handleLogout}>logout</button> </p>
       <Togglable buttonLabel="create new blog" ref={blogFormRef}>
         <BlogForm createBlog={addBlog} userid={user._id} />
       </Togglable>
+      <br/>
+      <h3>All Blogs:</h3>
       {blogs.map(blog =>
-        <Blog key={blog.id} blog={blog} />
+        <Blog key={blog.id}
+        blog={blog}
+        addLike={() => addLike(blog.id)}
+        />
       )}
     </div>
   )

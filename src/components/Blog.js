@@ -1,4 +1,13 @@
+import PropTypes from 'prop-types'
+
 const Blog = ({blog, user, addLike, removeBlog}) => {
+
+  Blog.propTypes = {
+    blog: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
+    addLike: PropTypes.func.isRequired,
+    removeBlog: PropTypes.func.isRequired
+  }
 
   const showDeleteButton = {
     display: user.username === blog.user.username ? "" : "none"

@@ -146,7 +146,7 @@ const App = () => {
       <Notification message={statusMessage} />
       <p>{user.name} logged in <button onClickCapture={handleLogout}>logout</button> </p>
       <Togglable buttonLabel="create new blog" ref={blogFormRef}>
-        <BlogForm createBlog={addBlog} userid={user._id} />
+        <BlogForm createBlog={addBlog}/>
       </Togglable>
       <br/>
       <h3>All Blogs:</h3>

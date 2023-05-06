@@ -25,7 +25,7 @@ test('renders title and author', () => {
     expect(author).toBeDefined()
 })
 
-test("clicking the like button twice, calls event handler function twice", async () => {
+test("clicking the like button twice calls event handler function twice", async () => {
     const blog = {
         title: 'Component testing is done with react-testing-library',
         author: 'Tester',

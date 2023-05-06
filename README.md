@@ -85,8 +85,15 @@
 
 ### Tehtävä 5.12: blogilistan testit, step2
 - Toimii ongelmitta
-- Luotu testi, oka varmistaa, että jos komponentin like-nappia painetaan kahdesti, komponentin propsina saamaa tapahtumankäsittelijäfunktiota kutsutaan kaksi kertaa
+- Luotu testi, joka varmistaa, että jos komponentin like-nappia painetaan kahdesti, komponentin propsina saamaa tapahtumankäsittelijäfunktiota kutsutaan kaksi kertaa
     - Myös sijainnissa: [Blog.test.js](./src/components/Blog.test.js)
+
+### Tehtävä 5.13: blogilistan testit, step3
+- Testi ei mene läpi toistaiseksi, eli tämä vaihe ei toimi halutulla tavalla
+- Yritetty luoda testi, jonka tarkoituksena olisi varmistaa, että lomake kutsuu propsina saamaansa takaisinkutsufunktiota oikeilla tiedoilla siinä vaiheessa kun blogi luodaan
+    - Sijainnissa: [BlogForm.test.js](./src/components/BlogForm.test.js)
+    - Lomakkeeseen tallentaminen ei testissä kuitenkaan onnistu, lisääminen onnistuu kuitenkin käytännössä täysin ilman ongelmia
+    - Jokin virhe testin määrittelyssä, ei ole ehditty tutkia enempää
 
 ### Vapaaehtoinen TODO:
 - Lisää kommentteja

@@ -6,7 +6,7 @@ const Blog = ({blog, user, addLike, removeBlog}) => {
     blog: PropTypes.object.isRequired,
     user: PropTypes.object.isRequired,
     addLike: PropTypes.func.isRequired,
-    removeBlog: PropTypes.func.isRequired
+    removeBlog: PropTypes.func
   }
 
   const showDeleteButton = {

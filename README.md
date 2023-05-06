@@ -98,3 +98,4 @@
 ### Vapaaehtoinen TODO:
 - Lisää kommentteja
 - Paranna erityyppisten notifikaatioiden yhteensopivuutta
+- Implementoi blogien järjestäminen erilliseen komponenttiin

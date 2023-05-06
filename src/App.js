@@ -96,6 +96,21 @@ const App = () => {
       })
   }
 
+  const removeBlog = id => {
+    const blog = blogs.find(b => b.id === id);
+    if (window.confirm(`Delete blog ${blog.title} by ${blog.author}`)) {
+      blogService.deleteBlog(id).then(() => {
+        setBlogs(blogs.filter(b => b.id !== id));
+        setStatusMessage(
+          `Blog ${blog.title} by ${blog.author} was removed from bloglist`
+        );
+        setTimeout(() => {
+          setStatusMessage(null);
+        }, 4000);
+      });
+    }
+  };
+
   if (user === null) {
     return (
       <div>
@@ -140,6 +155,8 @@ const App = () => {
         <Blog key={blog.id}
         blog={blog}
         addLike={() => addLike(blog.id)}
+        removeBlog={() => removeBlog(blog.id)}
+        user = {user}
         />
       ))}
     </div>

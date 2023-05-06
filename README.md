@@ -62,6 +62,15 @@
 - Sijainnissa: [App-5-8.js](./src/App-5-8.js)
 - Sovellus näyttää blogit likejen mukaisessa suuruusjärjestyksessä, eniten liketty ensin
 
+### Tehtävä 5.9: blogilistan frontend, step9
+- Toimii, ilmenee kuitenkin tehtävänannossa annettu "bugi", josta ilmoitettu aiemmin:
+    - *"Like-painiketta tai lisättäessä uutta blogia, kyseisestä blogista häviää delete-painike. Tämä johtuu siitä, että osassa 4 /api/blogs-endpointin PUT ja POST -metodit eivät lisää lähettämäänsä dataan user-oliota."*
+- Sijainnissa: [App-5-9.js](./src/App-5-9.js)
+- Lisätty nappi blogin poistamiselle
+    - Poistonappi näytetään ainoastaan jos kyseessä on kirjautuneen käyttäjän lisäämä blogi
+- Toteutettu myös logiikka poistamiselle
+    - Poistoyritys lähettää myös varmistusviestin käyttäjälle funktion `window.confirm` avulla
+
 ### Vapaaehtoinen TODO:
 - Lisää kommentteja
 - Paranna erityyppisten notifikaatioiden yhteensopivuutta

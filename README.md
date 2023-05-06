@@ -83,6 +83,10 @@
 - Luotu testi, joka varmistaa että blogin näyttävä komponentti renderöi blogin titlen ja authorin
     - Sijainnissa: [Blog.test.js](./src/components/Blog.test.js)
 
+### Tehtävä 5.12: blogilistan testit, step2
+- Toimii ongelmitta
+- Luotu testi, oka varmistaa, että jos komponentin like-nappia painetaan kahdesti, komponentin propsina saamaa tapahtumankäsittelijäfunktiota kutsutaan kaksi kertaa
+    - Myös sijainnissa: [Blog.test.js](./src/components/Blog.test.js)
 
 ### Vapaaehtoinen TODO:
 - Lisää kommentteja

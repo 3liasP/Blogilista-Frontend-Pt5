@@ -15,13 +15,13 @@ const Blog = ({blog, user, addLike, removeBlog}) => {
 
   return (
     <li className='blog'>
-    {blog.title}<br/>
-    by: {blog.author}<br/>
-    likes: {blog.likes}
-    <button onClick={addLike}>like</button><br/>
+    <div><i>{blog.title}</i></div>
+    <div>by: <i>{blog.author}</i></div>
+    <div>likes: {blog.likes}<button onClick={addLike}>like</button></div>
+    <div>added by: {blog.user.username}</div>
     <button style={showDeleteButton} onClick={removeBlog}>remove</button><br/>
     <br/>
-    </li> 
+    </li>
   )
 
 }

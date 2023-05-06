@@ -78,6 +78,12 @@
     - [BlogForm.js](./src/components/BlogForm.js)
     - [Notification.js](./src/components/Notification.js)
 
+### Tehtävä 5.11: blogilistan testit, step1
+- Toimii ongelmitta
+- Luotu testi, joka varmistaa että blogin näyttävä komponentti renderöi blogin titlen ja authorin
+    - Sijainnissa: [Blog.test.js](./src/components/Blog.test.js)
+
+
 ### Vapaaehtoinen TODO:
 - Lisää kommentteja
 - Paranna erityyppisten notifikaatioiden yhteensopivuutta

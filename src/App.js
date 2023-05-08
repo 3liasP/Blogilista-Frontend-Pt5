@@ -7,6 +7,7 @@ import blogService from './services/blogs'
 import loginService from './services/login'
 import './index.css'
 
+// Pääkomponentti
 const App = () => {
   const [blogs, setBlogs] = useState([])
 	const [statusMessage, setStatusMessage] = useState(null)
@@ -32,6 +33,7 @@ const App = () => {
 
   const blogFormRef = useRef()
 
+  // Vastaa kirjautumisesta sisään
   const handleLogin = async (event) => {
     event.preventDefault()
     try {
@@ -42,11 +44,12 @@ const App = () => {
       window.localStorage.setItem(
         'loggedBlogappUser', JSON.stringify(user)
       )
+    // Asetetaan käyttäjäksi kirjautunut käyttäjä
       blogService.setToken(user.token)
       setUser(user)
       setUsername('')
       setPassword('')
-      
+    // Ilmoittaa virheellisistä tunnuksista
     } catch (exception) {
       setStatusMessage('wrong username or password')
       setTimeout(() => {
@@ -54,16 +57,19 @@ const App = () => {
       }, 4000)
     }
   }
-
+  // Vastaa uloskirjautumisesta
+  // Kirjaa ulos ja lähettää ilmoituksen onnistuneesta operaatiosta
   const handleLogout = () => {
     window.localStorage.removeItem('loggedBlogappUser')
+  // Kirjataan käyttäjä ulos asettamalla käyttäjä "tyhjäksi"
     setUser(null)
     setStatusMessage('successfully logged out')
         setTimeout(() => {
           setStatusMessage(null)}, 4000)
     
   }
-
+  // Vastaa blogin lisäämisestä
+  // Päivittää renderöitävät blogit ja lähettää ilmoituksen onnistuneesta operaatiosta
   const addBlog = (blogObject) => {
     blogService
       .create(blogObject)
@@ -75,7 +81,7 @@ const App = () => {
             setStatusMessage(null)}, 4000)
       })
   }
-
+  // Vastaa tykkäysten lisäämisestä ja muutoksen renderöinnistä
   const addLike = id => {
     const blog = blogs.find(b => b.id === id)
     const newLikes = blog.likes + 1
@@ -87,6 +93,8 @@ const App = () => {
         setBlogs(blogs.map(blog => blog.id !== id ? blog : returnedBlog))
       })
       .catch(() => {
+  // Lähettää ilmoituksen, mikäli jostain syystä jo poistettua blogia yritetään tykätä
+  // Tämän ei kuitenkaan tulisi olla mahdollista
         setStatusMessage(`Blog ${blog.title} is already removed from server!`)
         setTimeout(() => {
           setStatusMessage(null)
@@ -94,12 +102,13 @@ const App = () => {
         setBlogs(blogs.filter(b => b.id !== id))
       })
   }
-
+  // Vastaa blogin poistamisesta
   const removeBlog = id => {
     const blog = blogs.find(b => b.id === id);
-    if (window.confirm(`Delete blog ${blog.title} by ${blog.author}`)) {
+    if (window.confirm(`Delete blog ${blog.title} by ${blog.author}?`)) {
       blogService.deleteBlog(id).then(() => {
         setBlogs(blogs.filter(b => b.id !== id));
+  // Lähettää ilmoituksen onnistuneesta poisto-operaatiosta
         setStatusMessage(
           `Blog ${blog.title} by ${blog.author} was removed from bloglist`
         );
@@ -110,6 +119,7 @@ const App = () => {
     }
   };
 
+  // Ehdollinen renderöinti, jos käyttäjä on "tyhjä", renderöidään sisäänkirjautumislomake
   if (user === null) {
     return (
       <div>
@@ -139,7 +149,7 @@ const App = () => {
       </div>
     )
   }
-
+  // Mikäli käyttäjä on kirjautuneena sisään, renderöidään tämä
   return (
     <div>
       <h1>BlogApp</h1>

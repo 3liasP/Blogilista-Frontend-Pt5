@@ -93,9 +93,4 @@
 - Yritetty luoda testi, jonka tarkoituksena olisi varmistaa, että lomake kutsuu propsina saamaansa takaisinkutsufunktiota oikeilla tiedoilla siinä vaiheessa kun blogi luodaan
     - Sijainnissa: [BlogForm.test.js](./src/components/BlogForm.test.js)
     - Lomakkeeseen tallentaminen ei testissä kuitenkaan onnistu, lisääminen onnistuu kuitenkin käytännössä täysin ilman ongelmia
-    - Jokin virhe testin määrittelyssä, ei ole ehditty tutkia enempää
-
-### Vapaaehtoinen TODO:
-- Lisää kommentteja
-- Paranna erityyppisten notifikaatioiden yhteensopivuutta
-- Implementoi blogien järjestäminen erilliseen komponenttiin
+    - Jokin virhe testin määrittelyssä, ei ole tutkittu enempää
